@@ -1,10 +1,48 @@
+"use client";
+
+import { useState } from "react";
 import { techStack } from "./data";
 
 export default function Home() {
+  const [command, setCommand] = useState("");
+  const [terminalOutput, setTerminalOutput] = useState([
+    "✔ Core dependencies verified [OK]",
+    "✔ Algorithm target execution latency optimized to O(log N)",
+    "✔ Multi-table SQL schemas and Pandas manipulation layer aligned",
+  ]);
+
+  const handleCommandSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const cleanCmd = command.trim().toLowerCase();
+    
+    let response = [`❯ ${command}`];
+
+    if (cleanCmd === "help") {
+      response.push("Available commands: clear, help, status, metrics, skills");
+    } else if (cleanCmd === "status") {
+      response.push("System: Active // Node_Verified. All pipelines running nominal.");
+    } else if (cleanCmd === "metrics") {
+      response.push("Predictive Market Engine: 94% Precision // 91% Recall // Latency: O(log N)");
+    } else if (cleanCmd === "skills") {
+      response.push("Core Matrix Loaded: Python, SQL, C++, Pandas, Model-Based Design (V-Cycle).");
+    } else if (cleanCmd === "clear") {
+      setTerminalOutput([]);
+      setCommand("");
+      return;
+    } else if (cleanCmd === "") {
+      return;
+    } else {
+      response.push(`Command not recognized: '${command}'. Type 'help' for available directives.`);
+    }
+
+    setTerminalOutput((prev) => [...prev, ...response]);
+    setCommand("");
+  };
+
   return (
     <main className="min-h-screen bg-[#0a0a0a] text-[#ededed] p-8 max-w-5xl mx-auto font-mono selection:bg-emerald-500 selection:text-black">
       
-      {/* HEADER SECTION */}
+      
       <header className="border-b border-[#1a1a1a] pb-6 mb-12 flex justify-between items-center">
         <div>
           <h1 className="text-xl font-bold tracking-tight text-emerald-400 flex items-center gap-2">
@@ -24,7 +62,7 @@ export default function Home() {
         </div>
       </header>
 
-      {/* HERO SECTION */}
+      
       <section className="mb-16">
         <div className="bg-[#111] border border-[#1a1a1a] p-6 rounded-lg relative overflow-hidden group hover:border-emerald-500/20 transition-colors">
           <div className="absolute top-0 right-0 p-2 text-[9px] text-gray-600 uppercase tracking-widest font-sans">
@@ -43,32 +81,44 @@ export default function Home() {
             from data manipulation to cloud deployment.
           </p>
           
-          {/* FAKE LIVE TERMINAL OUTPUT */}
+          
           <div className="text-xs bg-[#050505] p-4 rounded border border-[#1a1a1a] font-mono shadow-inner">
-            <div className="flex items-center space-x-2 mb-2 text-gray-600 text-[10px]">
+            <div className="flex items-center space-x-2 mb-3 text-gray-600 text-[10px]">
               <span className="w-2.5 h-2.5 rounded-full bg-red-500/20"></span>
               <span className="w-2.5 h-2.5 rounded-full bg-yellow-500/20"></span>
               <span className="w-2.5 h-2.5 rounded-full bg-green-500/20"></span>
-              <span className="ml-2">bash — session_analysis.sh</span>
+              <span className="ml-2 text-gray-400">bash — interactive_session.sh (Type 'help')</span>
             </div>
-            <div className="space-y-1 text-gray-400">
-              <p><span className="text-purple-400">❯</span> npx brain --analyze --optimize-complexity</p>
-              <p className="text-emerald-500/80">✔ Core dependencies verified [OK]</p>
-              <p className="text-emerald-500/80">✔ Algorithm target execution latency optimized to O(log N)</p>
-              <p className="text-emerald-500/80">✔ Multi-table SQL schemas and Pandas manipulation layer aligned</p>
+            
+            <div className="space-y-1 text-gray-400 max-h-40 overflow-y-auto mb-3">
+              {terminalOutput.map((line, idx) => (
+                <p key={idx} className={line.startsWith("❯") ? "text-purple-400" : "text-emerald-500/80"}>
+                  {line}
+                </p>
+              ))}
             </div>
+
+            <form onSubmit={handleCommandSubmit} className="flex items-center text-gray-300 border-t border-[#1a1a1a] pt-2">
+              <span className="text-purple-400 mr-2 font-bold">❯</span>
+              <input
+                type="text"
+                value={command}
+                onChange={(e) => setCommand(e.target.value)}
+                placeholder="enter system directive..."
+                className="bg-transparent focus:outline-none w-full text-emerald-400 placeholder-gray-700"
+              />
+            </form>
           </div>
         </div>
       </section>
 
-      {/* RECENT PROJECTS CASE STUDY */}
+      
       <section id="projects" className="mb-16 scroll-mt-6">
         <h3 className="text-sm font-bold uppercase tracking-widest text-white mb-6 flex items-center">
           <span className="text-emerald-400 mr-2">//</span> Featured Projects
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           
-          {/* Card 1 */}
           <div className="bg-[#111] border border-[#1a1a1a] p-6 rounded-lg hover:border-emerald-500/30 transition-all group flex flex-col justify-between">
             <div>
               <div className="flex justify-between items-start mb-2">
@@ -80,7 +130,7 @@ export default function Home() {
                 </span>
               </div>
               <p className="text-[10px] font-semibold text-gray-500 mb-3 uppercase tracking-wider">Metrics: 94% Precision // 91% Recall</p>
-              <p className="text-gray-400 stream-text text-xs leading-relaxed mb-6">
+              <p className="text-gray-400 text-xs leading-relaxed mb-6">
                 Designed a tree-based dynamic programming system executing real-time data transformations 
                 using Pandas and advanced SQL multi-table joins. Optimized performance metrics to O(log N).
               </p>
@@ -88,11 +138,9 @@ export default function Home() {
             <div className="flex space-x-2 pt-2 border-t border-[#1a1a1a]">
               <span className="text-[10px] font-sans bg-[#161616] px-2 py-1 rounded text-gray-400 border border-[#222]">Python</span>
               <span className="text-[10px] font-sans bg-[#161616] px-2 py-1 rounded text-gray-400 border border-[#222]">SQL</span>
-              <span className="text-[10px] font-sans bg-[#161616] px-2 py-1 rounded text-gray-400 border border-[#222]">Pandas</span>
             </div>
           </div>
 
-          {/* Card 2 */}
           <div className="bg-[#111] border border-[#1a1a1a] p-6 rounded-lg hover:border-emerald-500/30 transition-all group flex flex-col justify-between">
             <div>
               <div className="flex justify-between items-start mb-2">
@@ -118,7 +166,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* TECH STACK SECTION */}
+      
       <section id="stack" className="mb-16 scroll-mt-6">
         <h3 className="text-sm font-bold uppercase tracking-widest text-white mb-6 flex items-center">
           <span className="text-emerald-400 mr-2">//</span> Core Competencies
