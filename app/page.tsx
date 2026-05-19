@@ -1,6 +1,9 @@
+import { techStack } from "./data";
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#0a0a0a] text-[#ededed] p-8 max-w-5xl mx-auto font-mono">
+      
       {/* HEADER SECTION */}
       <header className="border-b border-[#222] pb-6 mb-12 flex justify-between items-center">
         <div>
@@ -37,7 +40,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* RECENT PROJECTS CASE STUDY MOCK */}
+      {/* RECENT PROJECTS CASE STUDY */}
       <section id="projects" className="mb-16">
         <h3 className="text-lg font-bold text-white mb-6 flex items-center">
           <span className="text-emerald-400 mr-2">&gt;</span> Featured Projects
@@ -78,6 +81,32 @@ export default function Home() {
 
         </div>
       </section>
+
+      {/* TECH STACK SECTION */}
+      <section id="stack" className="mb-16">
+        <h3 className="text-lg font-bold text-white mb-6 flex items-center">
+          <span className="text-emerald-400 mr-2">&gt;</span> Core Core_Competencies.sh
+        </h3>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {techStack.map((item, index) => (
+            <div key={index} className="bg-[#111] border border-[#1a1a1a] p-5 rounded-lg">
+              <div className="text-xs text-gray-500 font-mono mb-3 flex items-center justify-between">
+                <span>[0{index + 1}] {item.category}</span>
+                <span className="text-emerald-500/50">✔</span>
+              </div>
+              <ul className="space-y-2">
+                {item.skills.map((skill, sIndex) => (
+                  <li key={sIndex} className="text-sm text-gray-300 flex items-center font-mono">
+                    <span className="text-emerald-500 mr-2 text-xs">■</span>
+                    {skill}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </section>
+
     </main>
   );
 }
