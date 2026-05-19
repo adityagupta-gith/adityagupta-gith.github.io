@@ -1,65 +1,83 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <main className="min-h-screen bg-[#0a0a0a] text-[#ededed] p-8 max-w-5xl mx-auto font-mono">
+      {/* HEADER SECTION */}
+      <header className="border-b border-[#222] pb-6 mb-12 flex justify-between items-center">
+        <div>
+          <h1 className="text-xl font-bold tracking-tight text-emerald-400">username.github.io</h1>
+          <p className="text-xs text-gray-500 mt-1">Status: Active // Production</p>
+        </div>
+        <div className="flex space-x-4 text-sm text-gray-400">
+          <a href="#projects" className="hover:text-emerald-400 transition-colors">./projects</a>
+          <a href="#stack" className="hover:text-emerald-400 transition-colors">./stack</a>
+        </div>
+      </header>
+
+      {/* HERO SECTION */}
+      <section className="mb-16">
+        <div className="bg-[#111] border border-[#222] p-6 rounded-lg shadow-2xl relative overflow-hidden">
+          <div className="absolute top-0 right-0 p-2 text-[10px] text-gray-600 uppercase tracking-widest">
+            AI/ML Module v1.0
+          </div>
+          <div className="flex items-center space-x-2 text-xs text-emerald-500 mb-4">
+            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span>System Online: Ready to Engineer</span>
+          </div>
+          <h2 className="text-3xl font-extrabold text-white mb-4">
+            Hi, I'm an AI/ML Engineer.
+          </h2>
+          <p className="text-gray-400 max-w-2xl text-sm leading-relaxed mb-6">
+            I build highly scalable machine learning architectures, optimize complex data processing 
+            pipelines, and deploy edge-ready neural networks. Focused on end-to-end optimization 
+            from data manipulation to cloud deployment.
           </p>
+          <div className="text-xs text-emerald-400/80 bg-[#0a0a0a] p-3 rounded border border-[#1a1a1a] overflow-x-auto">
+            <code>$ npx brain --analyze --optimize-complexity</code>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* RECENT PROJECTS CASE STUDY MOCK */}
+      <section id="projects" className="mb-16">
+        <h3 className="text-lg font-bold text-white mb-6 flex items-center">
+          <span className="text-emerald-400 mr-2">&gt;</span> Featured Projects
+        </h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          
+          {/* Card 1 */}
+          <div className="bg-[#111] border border-[#222] p-5 rounded-lg hover:border-emerald-500/30 transition-all group">
+            <h4 className="text-white font-bold group-hover:text-emerald-400 transition-colors">
+              Predictive Market Engine
+            </h4>
+            <p className="text-xs text-gray-500 mt-1 mb-3">Metrics: 94% Precision // 91% Recall</p>
+            <p className="text-gray-400 text-xs leading-relaxed mb-4">
+              Designed a tree-based dynamic programming system executing real-time data transformations 
+              using Pandas and advanced SQL multi-table joins. Optimized performance to O(log N).
+            </p>
+            <div className="flex space-x-2">
+              <span className="text-[10px] bg-[#1a1a1a] px-2 py-1 rounded text-gray-400">Python</span>
+              <span className="text-[10px] bg-[#1a1a1a] px-2 py-1 rounded text-gray-400">SQL</span>
+            </div>
+          </div>
+
+          {/* Card 2 */}
+          <div className="bg-[#111] border border-[#222] p-5 rounded-lg hover:border-emerald-500/30 transition-all group">
+            <h4 className="text-white font-bold group-hover:text-emerald-400 transition-colors">
+              IoT Smart Infrastructure Agent
+            </h4>
+            <p className="text-xs text-gray-500 mt-1 mb-3">Model-Based Design // V-Cycle Lifecycle</p>
+            <p className="text-gray-400 text-xs leading-relaxed mb-4">
+              Engineered model behaviors using continuous system checks for localized adaptive lighting environments. 
+              Built robust hardware-in-the-loop logic mappings.
+            </p>
+            <div className="flex space-x-2">
+              <span className="text-[10px] bg-[#1a1a1a] px-2 py-1 rounded text-gray-400">C++</span>
+              <span className="text-[10px] bg-[#1a1a1a] px-2 py-1 rounded text-gray-400">Scikit-Learn</span>
+            </div>
+          </div>
+
         </div>
-      </main>
-    </div>
+      </section>
+    </main>
   );
 }
