@@ -15,6 +15,7 @@ export default function Home() {
 
   const outputEndRef = useRef<HTMLDivElement>(null);
 
+  // Automatically scrolls the terminal downward as text prints out
   useEffect(() => {
     outputEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [terminalOutput]);
@@ -29,6 +30,7 @@ export default function Home() {
       response.push("  metrics    - Audit project statistics and accuracy benchmarks.");
       response.push("  cyber-sim  - Trigger simulation run of the LSTM intrusion detection pipeline.");
       response.push("  bot-query  - Execute a low-latency cache performance test on MongoDB schema.");
+      response.push("  contact    - Retrieve encrypted secure email communication coordinates.");
       response.push("  status     - Query current distributed infrastructure node health.");
       response.push("  clear      - Wipe terminal history logs.");
     } else if (cleanCmd === "status") {
@@ -52,6 +54,11 @@ export default function Home() {
       response.push("  [DATA] Injecting 500 parallel token generation request metrics.");
       response.push("  [PERF] Index verification check routing through MongoDB schema clusters.");
       response.push("  [COMP] Query lookup resolved in 45ms (Cached execution optimization: -200ms).");
+    } else if (cleanCmd === "contact") {
+      response.push("ESTABLISHING SECURE COMMUNICATIONS LINK...");
+      response.push("  [+] Email    : adityaguptajeee@gmail.com");
+      response.push("  [+] GitHub   : github.com/adityagupta-gith");
+      response.push("  [INFO] Transmitting signal pipeline. Standing by for incoming secure messages.");
     } else if (cleanCmd === "clear") {
       setTerminalOutput([]);
       setCommand("");
@@ -88,6 +95,8 @@ export default function Home() {
 
         {/* CORE GRID CARD GRID */}
         <section className="grid md:grid-cols-2 gap-6">
+          
+          {/* CARD 1: CYBERSECURITY PLATFORM */}
           <div className="bg-zinc-900/50 border border-zinc-800 rounded-lg p-6 flex flex-col justify-between hover:border-emerald-500/40 transition-colors">
             <div>
               <div className="flex items-center justify-between mb-4">
@@ -105,6 +114,7 @@ export default function Home() {
             </div>
           </div>
 
+          {/* CARD 2: FULL-STACK AI CHATBOT */}
           <div className="bg-zinc-900/50 border border-zinc-800 rounded-lg p-6 flex flex-col justify-between hover:border-emerald-500/40 transition-colors">
             <div>
               <div className="flex items-center justify-between mb-4">
@@ -121,6 +131,7 @@ export default function Home() {
               React.js · Node.js · MongoDB · Express
             </div>
           </div>
+
         </section>
 
         {/* INTERACTIVE TERMINAL SECTION */}
@@ -136,6 +147,8 @@ export default function Home() {
           </div>
 
           <div className="bg-black border border-zinc-800 rounded-lg shadow-2xl overflow-hidden font-mono text-sm">
+            
+            {/* TERMINAL HEADER */}
             <div className="bg-zinc-900/80 px-4 py-2.5 flex items-center justify-between border-b border-zinc-800">
               <div className="flex items-center gap-1.5">
                 <div className="w-3 h-3 rounded-full bg-zinc-700" />
@@ -146,6 +159,7 @@ export default function Home() {
               <div className="w-12" />
             </div>
 
+            {/* TERMINAL CONTENT SCREEN */}
             <div className="p-4 h-64 overflow-y-auto flex flex-col gap-1 text-zinc-300 selection:bg-emerald-500/40 selection:text-white">
               {terminalOutput.map((line, idx) => (
                 <div key={idx} className="whitespace-pre-wrap leading-relaxed">
@@ -163,6 +177,7 @@ export default function Home() {
               <div ref={outputEndRef} />
             </div>
 
+            {/* TERMINAL INPUT BOX BAR */}
             <form onSubmit={handleCommandSubmit} className="flex border-t border-zinc-800 bg-zinc-900/30">
               <span className="pl-4 py-2.5 text-purple-400 font-bold select-none flex items-center">
                 ❯
@@ -179,6 +194,7 @@ export default function Home() {
                 spellCheck="false"
               />
             </form>
+
           </div>
         </section>
 
