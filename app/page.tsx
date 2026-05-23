@@ -10,9 +10,11 @@ export default function Home() {
     "",
   ]);
 
+  // Complexity Sandbox State
+  const [inputSize, setInputSize] = useState<number>(100);
+
   const outputEndRef = useRef<HTMLDivElement>(null);
 
-  // Automatically scrolls the terminal downward as text prints out
   useEffect(() => {
     outputEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [terminalOutput]);
@@ -64,6 +66,12 @@ export default function Home() {
     setCommand("");
   };
 
+  // Safe operation calculators for Big-O metrics
+  const getLinearOps = (n: number) => n;
+  const getLogOps = (n: number) => Math.round(Math.log2(n || 1));
+  const getLinearithmicOps = (n: number) => Math.round(n * Math.log2(n || 1));
+  const getQuadraticOps = (n: number) => n * n;
+
   return (
     <main className="min-h-screen bg-[#0a0a0a] text-[#ededed] p-6 md:p-12 flex flex-col items-center selection:bg-emerald-500/30 selection:text-emerald-400">
       <div className="max-w-4xl w-full flex flex-col gap-10">
@@ -78,10 +86,8 @@ export default function Home() {
           </p>
         </header>
 
-        {/* CORE CORE CARD GRID */}
+        {/* CORE GRID CARD GRID */}
         <section className="grid md:grid-cols-2 gap-6">
-          
-          {/* CARD 1: CYBERSECURITY PLATFORM */}
           <div className="bg-zinc-900/50 border border-zinc-800 rounded-lg p-6 flex flex-col justify-between hover:border-emerald-500/40 transition-colors">
             <div>
               <div className="flex items-center justify-between mb-4">
@@ -99,7 +105,6 @@ export default function Home() {
             </div>
           </div>
 
-          {/* CARD 2: FULL-STACK AI CHATBOT */}
           <div className="bg-zinc-900/50 border border-zinc-800 rounded-lg p-6 flex flex-col justify-between hover:border-emerald-500/40 transition-colors">
             <div>
               <div className="flex items-center justify-between mb-4">
@@ -116,7 +121,6 @@ export default function Home() {
               React.js · Node.js · MongoDB · Express
             </div>
           </div>
-
         </section>
 
         {/* INTERACTIVE TERMINAL SECTION */}
@@ -132,8 +136,6 @@ export default function Home() {
           </div>
 
           <div className="bg-black border border-zinc-800 rounded-lg shadow-2xl overflow-hidden font-mono text-sm">
-            
-            {/* TERMINAL HEADER */}
             <div className="bg-zinc-900/80 px-4 py-2.5 flex items-center justify-between border-b border-zinc-800">
               <div className="flex items-center gap-1.5">
                 <div className="w-3 h-3 rounded-full bg-zinc-700" />
@@ -144,7 +146,6 @@ export default function Home() {
               <div className="w-12" />
             </div>
 
-            {/* TERMINAL CONTENT SCREEN */}
             <div className="p-4 h-64 overflow-y-auto flex flex-col gap-1 text-zinc-300 selection:bg-emerald-500/40 selection:text-white">
               {terminalOutput.map((line, idx) => (
                 <div key={idx} className="whitespace-pre-wrap leading-relaxed">
@@ -162,7 +163,6 @@ export default function Home() {
               <div ref={outputEndRef} />
             </div>
 
-            {/* TERMINAL INPUT BOX BAR */}
             <form onSubmit={handleCommandSubmit} className="flex border-t border-zinc-800 bg-zinc-900/30">
               <span className="pl-4 py-2.5 text-purple-400 font-bold select-none flex items-center">
                 ❯
@@ -179,7 +179,57 @@ export default function Home() {
                 spellCheck="false"
               />
             </form>
+          </div>
+        </section>
 
+        {/* ALGORITHMIC COMPLEXITY INTERACTIVE SANDBOX */}
+        <section className="bg-zinc-900/30 border border-zinc-800 rounded-lg p-6 font-mono">
+          <div className="mb-6">
+            <h3 className="text-lg font-bold text-white mb-2">&gt;_ Algorithmic Matrix Sandbox</h3>
+            <p className="text-xs text-zinc-400">
+              Adjust the structural input size element count to visualize theoretical scaling operations.
+            </p>
+          </div>
+
+          <div className="flex flex-col gap-4 mb-6">
+            <div className="flex items-center justify-between text-sm">
+              <span className="text-zinc-400">Input Size (N): <span className="text-emerald-400 font-bold">{inputSize}</span></span>
+              <span className="text-xs text-zinc-500">Scale limit: 10,000</span>
+            </div>
+            <input
+              type="range"
+              min="10"
+              max="2000"
+              step="10"
+              value={inputSize}
+              onChange={(e) => setInputSize(Number(e.target.value))}
+              className="w-full h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-emerald-400"
+            />
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-xs">
+            <div className="bg-black/40 border border-zinc-800/80 p-3 rounded-md">
+              <div className="text-zinc-500 mb-1">O(log N)</div>
+              <div className="text-purple-400 font-bold text-base">{getLogOps(inputSize)} ops</div>
+              <div className="text-[10px] text-zinc-600 mt-1">Binary Search / Segment Tree</div>
+            </div>
+            <div className="bg-black/40 border border-zinc-800/80 p-3 rounded-md">
+              <div className="text-zinc-500 mb-1">O(N)</div>
+              <div className="text-emerald-400 font-bold text-base">{getLinearOps(inputSize)} ops</div>
+              <div className="text-[10px] text-zinc-600 mt-1">Linear Scan / Hash Map</div>
+            </div>
+            <div className="bg-black/40 border border-zinc-800/80 p-3 rounded-md">
+              <div className="text-zinc-500 mb-1">O(N log N)</div>
+              <div className="text-amber-400 font-bold text-base">{getLinearithmicOps(inputSize)} ops</div>
+              <div className="text-[10px] text-zinc-600 mt-1">Merge Sort / Heap Heapq</div>
+            </div>
+            <div className="bg-black/40 border border-zinc-800/80 p-3 rounded-md">
+              <div className="text-zinc-500 mb-1">O(N²)</div>
+              <div className="text-rose-400 font-bold text-base">
+                {getQuadraticOps(inputSize).toLocaleString()} ops
+              </div>
+              <div className="text-[10px] text-zinc-600 mt-1">Nested Loops / DP Matrices</div>
+            </div>
           </div>
         </section>
 
