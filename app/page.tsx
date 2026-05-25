@@ -77,7 +77,7 @@ export default function Home() {
       title: "AI Cybersecurity Platform",
       date: "March 2026",
       logo: (
-        <svg className="w-7 h-7 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+        <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
       ),
       githubLink: "https://github.com/adityagupta-gith/AI-Cybersecurity-Platform",
       tech: ["Python", "Kafka", "React", "Docker", "Kubernetes", "TensorFlow"],
@@ -93,7 +93,7 @@ export default function Home() {
       title: "AI Chatbot",
       date: "October 2025",
       logo: (
-        <svg className="w-7 h-7 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+        <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
       ),
       githubLink: "https://github.com/adityagupta-gith/AI-Chatbot",
       tech: ["React", "Node.js", "MongoDB", "Express", "TypeScript", "OpenAI"],
@@ -109,7 +109,7 @@ export default function Home() {
       title: "Instagram Clone",
       date: "December 2024",
       logo: (
-        <svg className="w-7 h-7 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+        <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
       ),
       githubLink: "https://github.com/adityagupta-gith/Instagram-Clone",
       tech: ["Python", "React.js", "Node.js", "AWS", "Firebase", "Chakra UI"],
@@ -125,7 +125,7 @@ export default function Home() {
       title: "Personal Finance Tracker",
       date: "August 2024",
       logo: (
-        <svg className="w-7 h-7 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+        <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
       ),
       githubLink: "https://github.com/adityagupta-gith/Personal-Finance-Tracker",
       tech: ["Python", "Flask", "SQLite", "Pandas", "Statsmodels"],
@@ -143,12 +143,8 @@ export default function Home() {
       
       {/* FIXED NAVIGATION BAR */}
       <nav className="fixed top-0 w-full bg-[#050505]/80 backdrop-blur-xl border-b border-zinc-800/80 z-50 transition-all">
-        <div className="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
-          <div className="text-emerald-400 font-bold tracking-widest text-sm md:text-base flex items-center gap-2">
-            <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse shadow-[0_0_10px_rgba(16,185,129,0.8)]"></span>
-            ~/aditya_gupta
-          </div>
-          <div className="flex gap-6 text-xs md:text-sm text-zinc-400 uppercase tracking-wider font-semibold">
+        <div className="max-w-4xl mx-auto px-6 py-5 flex justify-center md:justify-end items-center">
+          <div className="flex gap-8 text-xs md:text-sm text-zinc-400 uppercase tracking-widest font-semibold">
             <a href="#home" className="hover:text-emerald-400 transition-colors duration-300">Home</a>
             <a href="#skills" className="hover:text-emerald-400 transition-colors duration-300">Skill</a>
             <a href="#projects" className="hover:text-emerald-400 transition-colors duration-300">Project</a>
@@ -159,38 +155,40 @@ export default function Home() {
       <main className="max-w-4xl mx-auto px-6 pt-32 pb-32 flex flex-col gap-40">
         
         {/* ================= 1. HOME / HERO SECTION ================= */}
-        <section id="home" className="scroll-mt-40 flex flex-col items-center justify-center text-center gap-8 pt-16 relative">
-          
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-lg h-96 bg-emerald-500/10 blur-[120px] rounded-full pointer-events-none -z-10"></div>
+        <section id="home" className="scroll-mt-40 pt-16 flex justify-center relative">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-xl h-96 bg-emerald-500/10 blur-[120px] rounded-full pointer-events-none -z-10"></div>
 
-          <div className="flex flex-col gap-6 items-center">
-            <p className="text-emerald-400 font-mono tracking-widest text-sm uppercase">
-              1. Hi, I am
+          {/* New Premium Boxed Container for Hero Section */}
+          <div className="bg-zinc-900/30 border border-zinc-800/80 p-8 md:p-16 rounded-[2rem] shadow-2xl backdrop-blur-md flex flex-col items-center text-center w-full max-w-3xl relative overflow-visible">
+            
+            <p className="text-emerald-400 font-mono tracking-widest text-sm uppercase mb-6">
+              Hi, I am
             </p>
             
-            <h1 className="text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-white via-emerald-100 to-emerald-500 leading-tight pb-2">
+            <h1 className="text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-white via-emerald-100 to-emerald-500 leading-tight pb-2 mb-4">
               Aditya Gupta
             </h1>
             
-            <h2 className="text-xl md:text-2xl text-zinc-300 tracking-wide font-light max-w-2xl leading-relaxed mt-2">
+            <h2 className="text-xl md:text-2xl text-zinc-300 tracking-wide font-light max-w-2xl leading-relaxed mb-6">
               A forward-thinking <strong className="text-white font-semibold">Software Engineer</strong> specializing in <strong className="text-emerald-400 font-semibold">AI & Machine Learning</strong>.
             </h2>
             
-            <p className="text-zinc-400 max-w-2xl leading-relaxed text-sm md:text-base px-4">
+            <p className="text-zinc-400 max-w-xl leading-relaxed text-sm md:text-base px-4 mb-10">
               I architect scalable intelligent systems and high-performance applications that bridge the gap between complex algorithms and seamless user experiences. Let's transform ideas into immersive experiences together.
             </p>
 
-            <div className="relative mt-6 z-20">
+            {/* Contact Interactive Section */}
+            <div className="relative z-20">
               <button 
                 onClick={() => setShowContact(!showContact)}
-                className="group relative px-10 py-4 bg-zinc-900 border border-zinc-700 hover:border-emerald-500 text-white rounded-full transition-all duration-300 overflow-hidden flex items-center gap-3 shadow-[0_0_0_rgba(16,185,129,0)] hover:shadow-[0_0_20px_rgba(16,185,129,0.3)]"
+                className="group relative px-10 py-4 bg-black border border-zinc-700 hover:border-emerald-500 text-white rounded-full transition-all duration-300 overflow-hidden flex items-center gap-3 shadow-[0_0_0_rgba(16,185,129,0)] hover:shadow-[0_0_20px_rgba(16,185,129,0.3)]"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-transparent translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-out"></div>
                 <span className="relative font-semibold tracking-widest text-sm uppercase">Contact Me</span>
                 <svg className={`relative w-4 h-4 transition-transform duration-300 ${showContact ? 'rotate-180 text-emerald-400' : 'text-zinc-400'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
               </button>
 
-              <div className={`absolute top-full left-1/2 -translate-x-1/2 mt-4 bg-black/80 backdrop-blur-xl border border-zinc-800 rounded-2xl p-2 min-w-[300px] shadow-2xl transition-all duration-300 origin-top ${showContact ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 -translate-y-2 pointer-events-none'}`}>
+              <div className={`absolute top-full left-1/2 -translate-x-1/2 mt-4 bg-black/90 backdrop-blur-xl border border-zinc-800 rounded-2xl p-2 min-w-[300px] shadow-2xl transition-all duration-300 origin-top ${showContact ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 -translate-y-2 pointer-events-none'}`}>
                 <a href="mailto:adityaguptajeee@gmail.com" className="flex items-center gap-4 p-3 hover:bg-zinc-800/50 rounded-xl transition-colors group">
                   <div className="w-10 h-10 rounded-full bg-zinc-900 border border-zinc-700 flex items-center justify-center group-hover:border-emerald-400 group-hover:text-emerald-400 transition-colors">
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
@@ -287,58 +285,81 @@ export default function Home() {
                   className={`group bg-zinc-900/40 border border-zinc-800/80 rounded-2xl transition-all duration-500 overflow-hidden cursor-pointer hover:border-emerald-500/50 ${isExpanded ? 'shadow-[0_0_30px_rgba(16,185,129,0.1)]' : ''}`}
                   onClick={() => setExpandedProject(isExpanded ? null : project.id)}
                 >
-                  {/* Card Header - Always Visible */}
-                  <div className="p-6 md:p-8 flex flex-col gap-4">
-                    <div className="flex justify-between items-start md:items-center gap-4">
-                      
-                      <div className="flex items-center gap-4">
-                        {/* 1. Project Logo */}
-                        <div className={`p-3 rounded-xl border transition-colors duration-300 ${isExpanded ? 'bg-emerald-500/10 border-emerald-500/40' : 'bg-black/50 border-zinc-700/50 group-hover:border-emerald-500/40'}`}>
-                          {project.logo}
-                        </div>
-                        
-                        {/* 2. Project Name */}
-                        <div>
-                          <h3 className={`text-xl md:text-2xl font-bold transition-colors duration-300 ${isExpanded ? 'text-emerald-400' : 'text-white group-hover:text-emerald-300'}`}>
-                            {project.title}
-                          </h3>
-                          <div className="text-xs text-zinc-500 font-mono mt-1">{project.date}</div>
-                        </div>
+                  
+                  {/* Card Header - COLLAPSED VIEW */}
+                  <div className="p-8 flex flex-col items-center text-center gap-5">
+                    
+                    {/* Maximize Logo and Project Name */}
+                    <div className="flex flex-col items-center gap-4">
+                      <div className={`p-4 rounded-2xl border transition-colors duration-300 ${isExpanded ? 'bg-emerald-500/10 border-emerald-500/40 text-emerald-400' : 'bg-black/50 border-zinc-700/50 text-emerald-500/70 group-hover:border-emerald-500/40 group-hover:text-emerald-400'}`}>
+                        {project.logo}
                       </div>
+                      
+                      <div>
+                        <h3 className={`text-2xl md:text-3xl font-bold tracking-tight transition-colors duration-300 ${isExpanded ? 'text-emerald-400' : 'text-white group-hover:text-emerald-300'}`}>
+                          {project.title}
+                        </h3>
+                        <div className="text-xs text-zinc-500 font-mono mt-2">{project.date}</div>
+                      </div>
+                    </div>
 
-                      {/* 3. GitHub Logo Link */}
+                    {/* Centered GitHub Button Link */}
+                    <div className="flex justify-center w-full my-2">
                       <a 
                         href={project.githubLink} 
                         target="_blank" 
                         rel="noreferrer" 
                         onClick={(e) => e.stopPropagation()} 
-                        className="p-2 bg-black/50 border border-zinc-800 hover:border-emerald-400 hover:text-emerald-400 text-zinc-400 rounded-full transition-all duration-300"
+                        className="flex items-center gap-2 px-5 py-2.5 bg-black/60 border border-zinc-700 hover:border-emerald-400 hover:text-emerald-400 text-zinc-300 rounded-full transition-all duration-300"
                         title="View Source on GitHub"
                       >
                         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        <span className="text-xs font-bold uppercase tracking-widest">Source Code</span>
                       </a>
                     </div>
 
-                    {/* 4. Tech Stack */}
-                    <div className="flex flex-wrap gap-2 mt-2">
+                    {/* Main Tech Stack */}
+                    <div className="flex flex-wrap justify-center gap-2 mt-1">
                       {project.tech.map(tech => (
-                        <span key={tech} className="text-[11px] text-emerald-400 font-mono bg-emerald-500/10 px-2.5 py-1 rounded border border-emerald-500/20">
+                        <span key={tech} className="text-xs text-emerald-400 font-mono bg-emerald-500/10 px-3 py-1.5 rounded-md border border-emerald-500/20 shadow-sm">
                           {tech}
                         </span>
                       ))}
                     </div>
+
+                    {/* Click indicator */}
+                    <div className={`mt-2 transition-all duration-300 ${isExpanded ? 'opacity-0 h-0' : 'opacity-100 h-auto'}`}>
+                      <span className="text-[10px] text-zinc-500 uppercase tracking-widest animate-pulse">Click to expand details</span>
+                    </div>
                   </div>
 
-                  {/* Card Body - Expands on Click */}
-                  <div className={`transition-all duration-500 ease-in-out border-t border-zinc-800/50 bg-black/30 ${isExpanded ? 'max-h-[1000px] opacity-100 py-6 px-6 md:px-8' : 'max-h-0 opacity-0 overflow-hidden'}`}>
-                    <p className="text-zinc-300 font-medium leading-relaxed mb-6 border-l-2 border-emerald-500 pl-4 bg-emerald-500/5 py-2">
+                  {/* Card Body - EXPANDED VIEW */}
+                  <div className={`transition-all duration-500 ease-in-out border-t border-zinc-800/50 bg-black/40 ${isExpanded ? 'max-h-[1500px] opacity-100 py-8 px-6 md:px-12' : 'max-h-0 opacity-0 overflow-hidden py-0'}`}>
+                    
+                    {/* Short Description */}
+                    <p className="text-zinc-300 text-lg font-light leading-relaxed mb-6 border-l-2 border-emerald-500 pl-5 bg-emerald-500/5 py-3 pr-4 rounded-r-lg text-left">
                       {project.shortDesc}
                     </p>
+
+                    {/* Next line: GitHub Logo with link */}
+                    <div className="flex justify-start w-full mb-8">
+                      <a 
+                        href={project.githubLink} 
+                        target="_blank" 
+                        rel="noreferrer" 
+                        onClick={(e) => e.stopPropagation()} 
+                        className="flex items-center gap-2 text-emerald-400 hover:text-emerald-300 transition-colors"
+                      >
+                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        <span className="text-sm font-semibold hover:underline">View Full Repository on GitHub</span>
+                      </a>
+                    </div>
                     
-                    <ul className="text-sm text-zinc-400 space-y-4 leading-relaxed list-none ml-2">
+                    {/* Bullet Points */}
+                    <ul className="text-sm text-zinc-400 space-y-4 leading-relaxed list-none text-left">
                       {project.bullets.map((bullet, i) => (
-                        <li key={i} className="flex gap-3">
-                          <span className="text-emerald-500 mt-1">▹</span>
+                        <li key={i} className="flex gap-4">
+                          <span className="text-emerald-500 mt-0.5 text-lg leading-none">▹</span>
                           <span>{bullet}</span>
                         </li>
                       ))}
